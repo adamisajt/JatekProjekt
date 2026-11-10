@@ -60,34 +60,34 @@ namespace JatekProjekt
         // 2. EGYSZERŰ AGGREGÁCIÓK ÉS ELDÖNTÉsek
         // ==========================================
 
-        // Számold meg Sum segítségével, hogy mennyi a karakterek összes aranya a szerveren!
+        // 6. Összes arany
         public int OsszesAranyMennyiseg()
         {
-            throw new NotImplementedException();
+            return karakterek.Sum(k => k.Arany);
         }
 
-        // Számítsd ki Average segítségével a karakterek átlagos szintjét double értékként!
+        // 7. Átlagos szint
         public double AtlagSzint()
         {
-            throw new NotImplementedException();
+            return karakterek.Average(k => k.Szint);
         }
 
-        // Állapítsd meg Any segítségével, hogy van-e olyan "Tolvaj" osztályú karakter, akinek a szintje eléri vagy meghaladja a 40-et!
+        // 8. Van-e legalább 40-es szintű tolvaj?
         public bool VaneMagasSzintuTolvaj()
         {
-            throw new NotImplementedException();
+            return karakterek.Any(k => k.Osztaly == "Tolvaj" && k.Szint >= 40);
         }
 
-        // Ellenőrizd Any segítségével, hogy létezik-e olyan karakter, akinek 10 000 aranynál több van a zsebében!
+        // 9. Van-e 10000 aranynál gazdagabb karakter?
         public bool VanETizEzerAranynalTobb()
         {
-            throw new NotImplementedException();
+            return karakterek.Any(k => k.Arany > 10000);
         }
 
-        // Keresd meg FirstOrDefault segítségével az első olyan karaktert, akinek az aranya meghaladja az 5000-et!
+        // 10. Az első karakter, akinek 5000-nél több aranya van
         public Karakter LegelsoOvenKarakter()
         {
-            throw new NotImplementedException();
+            return karakterek.FirstOrDefault(k => k.Arany > 5000);
         }
 
 
